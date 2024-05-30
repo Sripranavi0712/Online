@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="data:image/jpeg;base64,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" type="image/x-icon">
+</head>
+<body>
+
+    <section id="Home">
+        <nav>
+            <div class="logo">
+                <img src="image/logo.avif">
+            </div>
+
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Menu">Menu</a></li>
+                <li><a href="#Gallery">Gallery</a></li>
+                <li><a href="#Review">Review</a></li>
+                <li><a href="#Order">Order</a></li>
+            </ul>
+
+            <div class="icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+        </nav>
+
+        <div class="main">
+
+            <div class="men_text">
+                <h1>Get Fresh<span>Food</span><br>in a Easy Way</h1>
+            </div>
+
+            <div class="main_image">
+                <img src="image/main_img.png">
+            </div>
+
+        </div>
+
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse reiciendis quaerat nobis 
+            deleniti amet non inventore. Reprehenderit recusandae voluptatibus minus tenetur itaque numquam 
+            cum quos dolorem maxime. Quas, quaerat nisi. Lorem ipsum dolor sit, amet consectetur adipisicing 
+            elit. Cumque facilis, quaerat cupiditate nulla quibusdam quo sunt esse tempore inventore vel 
+            voluptate, amet laudantium adipisci veniam nihil quam molestiae omnis mollitia.
+        </p>
+
+        <div class="main_btn">
+            <a href="#">Order Now</a>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+
+    </section>
+
+    <div class="about" id="About">
+        <div class="about_main">
+
+            <div class="image">
+                <img src="image/Food-Plate.png">
+            </div>
+
+            <div class="about_text">
+                <h1><span>About</span>Us</h1>
+                <h3>Why Choose us?</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, est. Doloremque 
+                    sapiente veritatis laboriosam corrupti optio et maxime. Ad, amet explicabo eaque labore 
+                    cupiditate quasi nostrum nemo recusandae id quibusdam? Lorem ipsum dolor sit amet 
+                    consectetur adipisicing elit. Doloremque ab, dolores pariatur cum exercitationem, illo nisi 
+                    veritatis vitae ea deleniti fugiat quisquam tempora, accusantium corrupti excepturi optio. 
+                    Inventore, cupiditate recusandae.
+                </p>
+            </div>
+
+        </div>
+
+        <a href="#" class="about_btn">Order Now</a>
+
+    </div>
+
+
+
+    <!--Menu-->
+
+    <div class="menu" id="Menu">
+        <h1>Our<span>Menu</span></h1>
+
+        <div class="menu_box">
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/buger.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Buger</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                    </p>
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+
+            </div> 
+            
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/pasta.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>pasta</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                    </p>
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/lasagna.webp">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>lasagna</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                    </p>
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/chocolate_Drink.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Drink</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                    </p>
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/pizza.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>pizza</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                    </p>
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/Hot_dog.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Hot Dog</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                    </p>
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/juse.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Juse</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                    </p>
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/biryani.webp">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Biryani</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                    </p>
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/chocolate.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Chocolate</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                    </p>
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/ice_cream.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Ice Cream</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                    </p>
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/Spanchi.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Spanchi</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                    </p>
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+
+            </div> 
+
+            <div class="menu_card">
+
+                <div class="menu_image">
+                    <img src="image/sandwich.jpg">
+                </div>
+
+                <div class="small_card">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+
+                <div class="menu_info">
+                    <h2>Sandwich</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum assumenda voluptates
+                    </p>
+                    <h3>$20.00</h3>
+                    <div class="menu_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="#" class="menu_btn">Order Now</a>
+                </div>
+
+            </div> 
+            
+        </div>
+
+    </div>
+
+
+
+
+    <!--Gallary-->
+
+    <div class="gallery" id="Gallery">
+        <h1>Our<span>Gallary</span></h1>
+
+        <div class="gallery_image_box">
+            <div class="gallery_image">
+                <img src="image/gallary_1.jpg">
+
+                <h3>Food</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi sint eveniet laboriosam 
+                </p>
+                <a href="#" class="gallery_btn">Order Now</a>
+            </div>
+
+            <div class="gallery_image">
+                <img src="image/gallary_2.jpg">
+
+                <h3>Food</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi sint eveniet laboriosam 
+                </p>
+                <a href="#" class="gallary_btn">Order Now</a>
+            </div>
+
+            <div class="gallery_image">
+                <img src="image/gallary_3.jpg">
+
+                <h3>Food</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi sint eveniet laboriosam 
+                </p>
+                <a href="#" class="gallery_btn">Order Now</a>
+            </div>
+
+            <div class="gallery_image">
+                <img src="image/gallary_4.jpg">
+
+                <h3>Food</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi sint eveniet laboriosam 
+                </p>
+                <a href="#" class="gallery_btn">Order Now</a>
+            </div>
+
+            <div class="gallery_image">
+                <img src="image/gallary_5.jpg">
+
+                <h3>Food</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi sint eveniet laboriosam 
+                </p>
+                <a href="#" class="gallery_btn">Order Now</a>
+            </div>
+
+            <div class="gallery_image">
+                <img src="image/gallary_6.jpg">
+
+                <h3>Food</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi sint eveniet laboriosam 
+                </p>
+                <a href="#" class="gallery_btn">Order Now</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!--Review-->
+
+    <div class="review" id="Review">
+        <h1>Customer<span>Review</span></h1>
+
+        <div class="review_box">
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="image/review_1.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">John Deo</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus quam facere 
+                        blanditiis in fugiat tempore necessitatibus aliquid. Id adipisci, rem corrupti 
+                        asperiores distinctio delectus quae quia tenetur totam laboriosam quam. Lorem ipsum, 
+                        dolor sit amet consectetur adipisicing elit. Dolores soluta ullam ipsa voluptates 
+                        repudiandae dignissimos deleniti mollitia eum. Laudantium placeat velit nemo illo 
+                        pariatur. Fuga aperiam impedit illo atque repellendus!
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="image/review_2.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">John Deo</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus quam facere 
+                        blanditiis in fugiat tempore necessitatibus aliquid. Id adipisci, rem corrupti 
+                        asperiores distinctio delectus quae quia tenetur totam laboriosam quam. Lorem ipsum, 
+                        dolor sit amet consectetur adipisicing elit. Dolores soluta ullam ipsa voluptates 
+                        repudiandae dignissimos deleniti mollitia eum. Laudantium placeat velit nemo illo 
+                        pariatur. Fuga aperiam impedit illo atque repellendus!
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="image/review_3.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">John Deo</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus quam facere 
+                        blanditiis in fugiat tempore necessitatibus aliquid. Id adipisci, rem corrupti 
+                        asperiores distinctio delectus quae quia tenetur totam laboriosam quam. Lorem ipsum, 
+                        dolor sit amet consectetur adipisicing elit. Dolores soluta ullam ipsa voluptates 
+                        repudiandae dignissimos deleniti mollitia eum. Laudantium placeat velit nemo illo 
+                        pariatur. Fuga aperiam impedit illo atque repellendus!
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="review_card">
+
+                <div class="review_profile">
+                    <img src="image/review_4.png">
+                </div>
+
+                <div class="review_text">
+                    <h2 class="name">John Deo</h2>
+
+                    <div class="review_icon">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+
+                    <div class="review_social">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus quam facere 
+                        blanditiis in fugiat tempore necessitatibus aliquid. Id adipisci, rem corrupti 
+                        asperiores distinctio delectus quae quia tenetur totam laboriosam quam. Lorem ipsum, 
+                        dolor sit amet consectetur adipisicing elit. Dolores soluta ullam ipsa voluptates 
+                        repudiandae dignissimos deleniti mollitia eum. Laudantium placeat velit nemo illo 
+                        pariatur. Fuga aperiam impedit illo atque repellendus!
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!--Order-->
+
+    <div class="order" id="Order">
+        <h1><span>Order</span>Now</h1>
+
+        <div class="order_main">
+
+            <div class="order_image">
+                <img src="image/order_image.png">
+            </div>
+
+            <form action="#">
+
+                <div class="input">
+                    <p>Name</p>
+                    <input type="text" placeholder="Enter your name">
+                </div>
+
+                <div class="input">
+                    <p>Email</p>
+                    <input type="email" placeholder="Enter your email id">
+                </div>
+
+                <div class="input">
+                    <p>Mobile Number</p>
+                    <input placeholder="Enter your mobile number">
+                </div>
+
+                <div class="input">
+                    <p>How Much</p>
+                    <input type="number" placeholder="how many orders">
+                </div>
+
+                <div class="input">
+                    <p>Your Order</p>
+                    <input placeholder="food name">
+                </div>
+
+                <div class="input">
+                    <p>Address</p>
+                    <input placeholder="you Address">
+                </div>
+
+                <a href="#" class="order_btn">Order Now</a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!--Team-->
+
+    <div class="team">
+        <h1>Our<span>Team</span></h1>
+
+        <div class="team_box">
+            <div class="profile">
+                <img src="image/chef1.png">
+
+                <div class="info">
+                    <h2 class="name">Chef</h2>
+                    <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="profile">
+                <img src="image/chef2.png">
+
+                <div class="info">
+                    <h2 class="name">Chef</h2>
+                    <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="profile">
+                <img src="image/chef3.jpg">
+
+                <div class="info">
+                    <h2 class="name">Chef</h2>
+                    <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="profile">
+                <img src="image/chef4.jpg">
+
+                <div class="info">
+                    <h2 class="name">Chef</h2>
+                    <p class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                    <div class="team_icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!--Footer-->
+
+    <footer>
+        <div class="footer_main">
+
+            <div class="footer_tag">
+                <h2>Location</h2>
+                <p>Sri Lanka</p>
+                <p>USA</p>
+                <p>India</p>
+                <p>Japan</p>
+                <p>Italy</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Quick Link</h2>
+                <p>Home</p>
+                <p>About</p>
+                <p>Menu</p>
+                <p>Gallary</p>
+                <p>Order</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Contact</h2>
+                <p>+94 12 3456 789</p>
+                <p>+94 25 5568456</p>
+                <p>johndeo123@gmail.com</p>
+                <p>foodshop123@gmail.com</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Our Service</h2>
+                <p>Fast Delivery</p>
+                <p>Easy Payments</p>
+                <p>24 x 7 Service</p>
+            </div>
+
+            <div class="footer_tag">
+                <h2>Follows</h2>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+
+        </div>
+
+        <p class="end">Design by<span><i class="fa-solid fa-face-grin"></i> WT Master Code</span></p>
+
+    </footer>
+
+
+
+    
+</body>
+</html>
